@@ -1,0 +1,106 @@
+.app {
+  min-height: 100vh;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--background-color);
+  transition: all 0.3s ease-in;
+  -webkit-transition: all 0.3s ease-in;
+  -moz-transition: all 0.3s ease-in;
+  -ms-transition: all 0.3s ease-in;
+  -o-transition: all 0.3s ease-in;
+  &-header {
+    height: 5rem;
+    width: 100%;
+    background-color: var(--toolbar-background-color);
+  }
+
+  &-body {
+    flex: 1;
+    &-title {
+      margin: 3rem 0;
+      font-family: 'Indie Flower', cursive;
+      font-size: 5rem;
+      color: var(--text-color);
+    }
+    &__themes {
+      width: 100%;
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      align-items: center;
+      &-btn {
+        background-color: var(--item-background-color);
+        font-size: 2rem;
+        padding: 0.5rem 1rem;
+        margin: 1rem;
+        cursor: pointer;
+        color: var(--text-color);
+        border-radius: 1rem;
+        -webkit-border-radius: 1rem;
+        -moz-border-radius: 1rem;
+        -ms-border-radius: 1rem;
+        -o-border-radius: 1rem;
+      }
+    }
+    &__color-set {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      &-btn {
+        width: 60%;
+        height: 3rem;
+        margin: 1rem;
+        font-size: 1.5rem;
+        border-radius: 1rem;
+        -webkit-border-radius: 1rem;
+        -moz-border-radius: 1rem;
+        -ms-border-radius: 1rem;
+        -o-border-radius: 1rem;
+        color: var(--text-color);
+      }
+    }
+
+    &__fans {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      &--control {
+        width: 60%;
+        margin: 1rem 0;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        &-btn {
+          font-size: 2rem;
+          cursor: pointer;
+          padding: 0.5rem 1rem;
+          border-radius: 1rem;
+          -webkit-border-radius: 1rem;
+          -moz-border-radius: 1rem;
+          -ms-border-radius: 1rem;
+          -o-border-radius: 1rem;
+        }
+      }
+      &-fan {
+        width: 60%;
+        height: 20rem;
+
+        & > svg {
+          animation: spin var(--speed) linear infinite;
+        }
+      }
+    }
+  }
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
