@@ -1,6 +1,5 @@
 .app {
   min-height: 100vh;
-  height: 100%;
   width: 100%;
   display: flex;
   flex-direction: column;
@@ -20,6 +19,7 @@
 
   &-body {
     flex: 1;
+    margin: 0 0 10rem;
     &-title {
       margin: 3rem 0;
       font-family: 'Indie Flower', cursive;
@@ -90,8 +90,9 @@
       &-fan {
         width: 60%;
         height: 20rem;
-
         & > svg {
+          width: 100%;
+          height: 100%;
           animation: spin var(--speed) linear infinite;
         }
       }
